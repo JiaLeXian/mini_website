@@ -1,0 +1,268 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+}
+
+
+
+
+
+h1, header p, footer div.info, footer ul.links {
+  margin: auto;
+  max-width: 800px;
+}
+
+.logo,
+h1,
+h2 {
+    margin: 0;
+    line-height: 1;
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+}
+
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+h1 {
+	font: bold 250% Consolas, Monaco, monospace;
+	border-right: .1em solid #484848;
+	width: 800px;
+  color:#484848;
+	padding:120px;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 7s steps(21, end),
+	           blink-caret .5s step-end infinite alternate;
+}
+
+
+/*nav.primary {
+  background: #01554C;
+  margin: 0 auto;
+  text-align: center;
+  font: 16px sans-serif;
+  position: sticky;
+  top: 0;
+}
+
+nav.primary a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #eee;
+  text-decoration: none;
+}
+
+nav.primary a:hover {
+  background: #eee;
+  color: #333;
+}
+*/
+/* header */
+/*hamburger menu*/
+/* Style the hamburger menu */
+
+
+.header {
+  background-color: #01554c;
+
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  color:white;
+  font-family: Helvetica;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #01554c;
+  color: white;
+    font-family: Helvetica;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  color: white;
+  text-decoration: none;
+    font-family: Helvetica;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+  color: #01554C;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+  color:white;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
+
+
+
+/*Image Wall*/
+.image_wall{
+  float:left;
+}
+footer {
+  background: #E9A2C0;
+  padding: 20px;
+  font: 14px sans-serif;
+
+}
+
+footer div.info {
+  color: #ddd;
+}
+
+.image_wall:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+
+  }
+  .header .menu-icon {
+    display: none;
+  }
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #f4f4f4;
+    color: #01554C;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For tablets: */
+  .image_wall img{
+    float:left;
+    width: 250px;
+    height:300px;
+  }
+
+  .image_wall:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @-webkit-keyframes typing { from { width: 0; } }
+  @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+  h1 {
+  	font: bold 100% Consolas, Monaco, monospace;
+  	border-right: .1em solid #484848;
+  	width: 600px;
+    color:#484848;
+  	padding:120px;
+  	white-space: nowrap;
+  	overflow: hidden;
+  	-webkit-animation: typing 7s steps(21, end),
+  	           blink-caret .5s step-end infinite alternate;
+  }
